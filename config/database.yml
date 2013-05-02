@@ -19,3 +19,7 @@ test: &test
 
 cucumber:
   <<: *test
+
+production:
+  <<: *common
+  database: cotcdb_production
