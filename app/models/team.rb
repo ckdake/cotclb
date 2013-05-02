@@ -15,6 +15,6 @@ class Team < ActiveRecord::Base
   end
   
   def total_score
-    scoring_technical_wizadry + scoring_utility + scoring_people_bonus + scoring_penalties + scoring_bonuses
+    scoring_technical_wizadry + scoring_utility + scoring_people_bonus + scoring_bonuses - scoring_penalties
   end
 end

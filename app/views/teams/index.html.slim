@@ -1,27 +1,27 @@
 h1 Clash Of The Coders 2013
 
-table
+table#leaderboard
   thead
     tr
       th Name
       th Score
       th Description
       th Team Members
-      th
   tbody
     - @teams.each do |team|
       tr
-        td= team.name
+        td.skinny
+          = team.name
+          - if policy(team).edit?
+            br
+            = link_to 'Show', team
+            = link_to 'Edit', edit_team_path(team)
+            = link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
         td= team.score
         td= team.description
         td
           - team.team_members.split(' ').each do |email|
-            = image_tag(gravatar_url(email))
-        td
-          - if policy(team).edit?
-            = link_to 'Show', team
-            = link_to 'Edit', edit_team_path(team)
-            = link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+            = image_tag(gravatar_url(email), class: 'gravatar')
 br
 - if policy(Team).create?
   = link_to 'New Team', new_team_path
