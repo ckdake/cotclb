@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130502132650) do
+ActiveRecord::Schema.define(version: 20130502134345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,14 @@ ActiveRecord::Schema.define(version: 20130502132650) do
     t.string   "name"
     t.integer  "score"
     t.text     "description"
-    t.text     "scoring"
     t.text     "team_members"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "scoring_technical_wizadry", default: 0
+    t.integer  "scoring_utility",           default: 0
+    t.integer  "scoring_people_bonus",      default: 0
+    t.integer  "scoring_penalties",         default: 0
+    t.integer  "scoring_bonuses",           default: 0
   end
 
 end

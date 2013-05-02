@@ -24,8 +24,24 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :scoring %><br />
-    <%= f.text_area :scoring %>
+    <%= f.label :scoring_technical_wizadry %><br />
+    <%= f.number_field :scoring_technical_wizadry %>
+  </div>
+  <div class="field">
+    <%= f.label :scoring_utility %><br />
+    <%= f.number_field :scoring_utility %>
+  </div>
+  <div class="field">
+    <%= f.label :scoring_people_bonus %><br />
+    <%= f.number_field :scoring_people_bonus %>
+  </div>
+  <div class="field">
+    <%= f.label :scoring_penalties %><br />
+    <%= f.number_field :scoring_penalties %>
+  </div>
+  <div class="field">
+    <%= f.label :scoring_bonuses %><br />
+    <%= f.number_field :scoring_bonuses %>
   </div>
   <div class="field">
     <%= f.label :team_members %><br />

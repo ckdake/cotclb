@@ -6,7 +6,6 @@ table
       th Name
       th Score
       th Description
-      th Scoring
       th Team Members
       th
       th
@@ -17,7 +16,6 @@ table
         td= team.name
         td= team.score
         td= team.description
-        td= team.scoring
         td
           -team.team_members.split(' ').each do |email|
             = image_tag(gravatar_url(email))

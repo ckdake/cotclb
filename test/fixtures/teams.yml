@@ -4,12 +4,10 @@ one:
   name: MyString
   score: 1
   description: MyText
-  scoring: MyText
   team_members: MyText
 
 two:
   name: MyString
   score: 1
   description: MyText
-  scoring: MyText
   team_members: MyText
