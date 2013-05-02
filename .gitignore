@@ -14,3 +14,16 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Database
+config/database.yml
+
+.tddium*
+.rbenv*
+.ruby-version
+
+/coverage
+/solr
+.rvmrc
+.yardoc
+.env
