@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+  
+ h1 {
+   font-family: 'Faster One', cursive;
+ }
+ 
+ #content {
+     width: 600px;
+     margin-left: auto;
+     margin-right: auto;
+ }

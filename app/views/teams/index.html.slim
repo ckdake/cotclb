@@ -18,10 +18,10 @@ table
           - team.team_members.split(' ').each do |email|
             = image_tag(gravatar_url(email))
         td
-          - if current_user.admin?
+          - if policy(team).edit?
             = link_to 'Show', team
             = link_to 'Edit', edit_team_path(team)
             = link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
 br
-- if current_user.admin?
+- if policy(Team).create?
   = link_to 'New Team', new_team_path
