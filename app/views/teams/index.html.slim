@@ -14,7 +14,6 @@ table#leaderboard
           = team.name
           - if policy(team).edit?
             br
-            = link_to 'Show', team
             = link_to 'Edit', edit_team_path(team)
         td= team.score
         td= team.description
