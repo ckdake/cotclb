@@ -1,4 +1,4 @@
-h1 Clash Of The Coders 2013
+h1 Clash Of The Coders 2013 Leaderboard
 
 table#leaderboard
   thead
@@ -16,7 +16,6 @@ table#leaderboard
             br
             = link_to 'Show', team
             = link_to 'Edit', edit_team_path(team)
-            = link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
         td= team.score
         td= team.description
         td
