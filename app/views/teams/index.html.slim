@@ -1,0 +1,28 @@
+h1 Clash Of The Coders 2013
+
+table
+  thead
+    tr
+      th Name
+      th Score
+      th Description
+      th Scoring
+      th Team Members
+      th
+      th
+      th
+  tbody
+    - @teams.each do |team|
+      tr
+        td= team.name
+        td= team.score
+        td= team.description
+        td= team.scoring
+        td
+          -team.team_members.split(' ').each do |email|
+            = image_tag(gravatar_url(email))
+        td= link_to 'Show', team
+        td= link_to 'Edit', edit_team_path(team)
+        td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Team', new_team_path

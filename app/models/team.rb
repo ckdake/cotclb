@@ -1,4 +1,3 @@
 class Team < ActiveRecord::Base
-  serialize :scoring
-  serialize :team_members
+  scope :ordered, -> { order("score DESC") } 
 end
