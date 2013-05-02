@@ -13,6 +13,11 @@ gem 'slim'
 
 gem 'jquery-rails'
 
+# Authentication & Authorization
+gem 'omniauth'
+gem 'omniauth-google-apps', require: false
+gem 'pundit', github: 'alindeman/pundit'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

@@ -8,8 +8,6 @@ table
       th Description
       th Team Members
       th
-      th
-      th
   tbody
     - @teams.each do |team|
       tr
@@ -17,10 +15,13 @@ table
         td= team.score
         td= team.description
         td
-          -team.team_members.split(' ').each do |email|
+          - team.team_members.split(' ').each do |email|
             = image_tag(gravatar_url(email))
-        td= link_to 'Show', team
-        td= link_to 'Edit', edit_team_path(team)
-        td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+        td
+          - if current_user.admin?
+            = link_to 'Show', team
+            = link_to 'Edit', edit_team_path(team)
+            = link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
 br
-= link_to 'New Team', new_team_path
+- if current_user.admin?
+  = link_to 'New Team', new_team_path

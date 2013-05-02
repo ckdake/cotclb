@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/alindeman/pundit.git
+  revision: 98b6ce8817561f51bf693acc58480e3e0b92122e
+  specs:
+    pundit (0.2.0)
+      rails (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,6 +45,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    hashie (2.0.4)
     hike (1.2.2)
     i18n (0.6.4)
     jbuilder (1.0.2)
@@ -53,11 +61,24 @@ GEM
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.2)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-google-apps (0.0.2)
+      omniauth (~> 1.0)
+      omniauth-openid (~> 1.0)
+      ruby-openid-apps-discovery (~> 1.2.0)
+    omniauth-openid (1.0.1)
+      omniauth (~> 1.0)
+      rack-openid (~> 1.3.1)
     pg (0.15.1)
     polyglot (0.3.3)
     puma (2.0.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-openid (1.3.1)
+      rack (>= 1.1.0)
+      ruby-openid (>= 2.1.8)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.0.beta1)
@@ -77,6 +98,9 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    ruby-openid (2.2.3)
+    ruby-openid-apps-discovery (1.2.0)
+      ruby-openid (>= 2.1.7)
     sass (3.2.8)
     sass-rails (4.0.0.rc1)
       railties (>= 4.0.0.beta, < 5.0)
@@ -117,8 +141,11 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
   jbuilder (~> 1.0.1)
   jquery-rails
+  omniauth
+  omniauth-google-apps
   pg
   puma (~> 2.0.0)
+  pundit!
   rails (= 4.0.0.beta1)
   sass-rails (~> 4.0.0.beta1)
   slim

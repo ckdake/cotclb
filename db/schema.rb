@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130502134345) do
+ActiveRecord::Schema.define(version: 20130502140611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20130502134345) do
     t.integer  "scoring_people_bonus",      default: 0
     t.integer  "scoring_penalties",         default: 0
     t.integer  "scoring_bonuses",           default: 0
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "nick_name"
+    t.string   "uid"
+    t.boolean  "active",     default: true
+    t.boolean  "admin",      default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
